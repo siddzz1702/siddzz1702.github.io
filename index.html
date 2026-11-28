@@ -1,56 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Siddhant Kumar — Mechanical Engineering graduate building projects in Python, Power BI, data analytics and applied machine learning." />
-<title>Siddhant Kumar | Data & Applied AI Portfolio</title>
-<style>
-:root{--bg:#0b1020;--panel:#121a2d;--panel2:#172238;--text:#edf2ff;--muted:#a6b2ca;--line:#293650;--accent:#8ce0c1;--accent2:#a9b9ff;--amber:#f3c77b;--shadow:0 20px 60px rgba(0,0,0,.24)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#1a2945 0,transparent 34%),var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:10;background:rgba(11,16,32,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}.navinner{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:.02em}.brand span{color:var(--accent)}.links{display:flex;gap:24px;color:var(--muted);font-size:14px}.links a:hover{color:var(--accent)}.hero{padding:94px 0 72px;display:grid;grid-template-columns:1.35fr .65fr;gap:56px;align-items:center}.eyebrow{color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-.055em;margin:18px 0}.hero h1 em{font-style:normal;color:var(--accent)}.lead{color:var(--muted);font-size:18px;max-width:690px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 18px;border-radius:12px;border:1px solid var(--line);font-weight:700;font-size:14px}.btn.primary{background:var(--accent);color:#0a1720;border-color:var(--accent)}.btn:hover{transform:translateY(-2px);transition:.2s}.profilecard{background:linear-gradient(145deg,#1a2942,#10182a);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:var(--shadow)}.monogram{height:76px;width:76px;border-radius:22px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0b1522;display:grid;place-items:center;font-size:27px;font-weight:900}.profilecard h3{margin:18px 0 4px;font-size:22px}.profilecard p{color:var(--muted);margin:0}.mini{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}.mini div{padding:12px;background:rgba(255,255,255,.04);border-radius:12px}.mini b{display:block;font-size:18px}.mini small{color:var(--muted)}section{padding:58px 0;scroll-margin-top:80px}.sectionhead{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:26px}.kicker{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.16em;text-transform:uppercase}.sectionhead h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.04em;margin:7px 0 0}.sectionhead p{color:var(--muted);max-width:490px;margin:0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:linear-gradient(160deg,var(--panel),#10182a);border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:var(--shadow)}.cardtop{display:flex;justify-content:space-between;gap:12px;align-items:center}.tag{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;border-radius:999px;padding:5px 9px;background:rgba(140,224,193,.12);color:var(--accent)}.tag.progress{background:rgba(243,199,123,.12);color:var(--amber)}.tag.planned{background:rgba(169,185,255,.12);color:var(--accent2)}.card h3{font-size:21px;margin:14px 0 7px}.card p{color:var(--muted);margin:0 0 16px}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{font-size:12px;color:#d7e0f4;background:var(--panel2);border:1px solid var(--line);padding:5px 9px;border-radius:8px}.cardlink{display:inline-block;margin-top:17px;color:var(--accent);font-size:13px;font-weight:700}.stackgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.stackbox{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}.stackbox h3{margin:0 0 12px;font-size:17px}.stackbox p{color:var(--muted);font-size:13px;margin:12px 0 0}.stackbox .chips{gap:7px}.note{border-left:3px solid var(--amber);padding:12px 16px;background:rgba(243,199,123,.07);color:var(--muted);border-radius:0 10px 10px 0;margin-top:18px;font-size:13px}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.step strong{color:var(--accent);font-size:13px}.step h3{margin:7px 0}.step p{color:var(--muted);font-size:14px;margin:0}.about{display:grid;grid-template-columns:1fr 1fr;gap:26px}.about p{color:var(--muted)}.contact{background:linear-gradient(135deg,#172641,#111a2e);border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;justify-content:space-between;gap:20px;align-items:center}.contact h2{margin:0 0 6px}.contact p{color:var(--muted);margin:0}.footer{padding:30px 0 45px;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,.07);margin-top:50px}.muted{color:var(--muted)}
-@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:65px;gap:30px}.grid,.about{grid-template-columns:1fr}.stackgrid,.timeline{grid-template-columns:1fr 1fr}.links{gap:12px;font-size:12px}.sectionhead{display:block}.sectionhead p{margin-top:10px}.contact{display:block}.contact .actions{margin-top:20px}}
-@media(max-width:520px){.wrap{width:min(100% - 28px,1120px)}.links{display:none}.stackgrid,.timeline{grid-template-columns:1fr}.hero h1{font-size:46px}.card{padding:19px}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Siddhant Kumar — Business Intelligence, Data Analytics, and Business & Operations Analysis portfolio. Power BI, SQL, Python, Excel, and Tableau projects." />
+  <meta name="theme-color" content="#0b1220" />
+  <meta property="og:title" content="Siddhant Kumar | BI & Data Analytics" />
+  <meta property="og:description" content="Power BI dashboards, data analytics projects, and business operations analysis." />
+  <title>Siddhant Kumar | Business Intelligence & Data Analytics</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-soft: #101a2b;
+      --panel: #142136;
+      --panel-raised: #182943;
+      --text: #edf3ff;
+      --muted: #aab8cf;
+      --muted-2: #8192ad;
+      --line: rgba(190, 208, 236, .15);
+      --accent: #7ce0bd;
+      --accent-2: #a8c5ff;
+      --gold: #f1c77b;
+      --shadow: 0 18px 55px rgba(0, 0, 0, .22);
+      --radius: 20px;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 4%, rgba(75, 132, 173, .15), transparent 28rem),
+        radial-gradient(circle at 92% 18%, rgba(80, 164, 143, .12), transparent 26rem),
+        var(--bg);
+      font: 16px/1.68 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; border-radius: 5px; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(11, 18, 32, .88);
+      backdrop-filter: blur(16px);
+    }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .brand { font-weight: 850; font-size: 19px; letter-spacing: -.04em; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; color: var(--muted); font-size: 13px; font-weight: 650; }
+    .navlinks a:hover { color: var(--accent); }
+    .hero { padding: 88px 0 70px; display: grid; grid-template-columns: 1.4fr .8fr; gap: 54px; align-items: center; }
+    .eyebrow, .kicker { color: var(--accent); font-size: 11px; font-weight: 850; letter-spacing: .17em; text-transform: uppercase; }
+    h1 { max-width: 760px; margin: 17px 0 20px; font-size: clamp(42px, 6.4vw, 70px); line-height: 1.04; letter-spacing: -.06em; }
+    h1 em { color: var(--accent); font-style: normal; }
+    .hero-copy { max-width: 720px; color: var(--muted); font-size: 17px; }
+    .hero-copy strong { color: var(--text); font-weight: 700; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .pill, .chip { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; color: #dce8fa; background: rgba(255,255,255,.035); font-size: 11px; font-weight: 700; }
+    .actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 29px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 43px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 11px; font-size: 13px; font-weight: 800; transition: transform .18s ease, border-color .18s ease; }
+    .btn:hover { transform: translateY(-2px); border-color: rgba(124,224,189,.65); }
+    .btn.primary { color: #092018; background: var(--accent); border-color: var(--accent); }
+    .profile-card { padding: 25px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(145deg, rgba(28,48,73,.98), rgba(17,29,47,.98)); box-shadow: var(--shadow); }
+    .monogram { width: 66px; height: 66px; display: grid; place-items: center; border-radius: 19px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #0a1821; font-size: 25px; font-weight: 950; }
+    .profile-card h2 { margin: 16px 0 2px; font-size: 22px; letter-spacing: -.03em; }
+    .profile-card > p { margin: 0; color: var(--muted); font-size: 13px; }
+    .focus-list { display: grid; gap: 10px; margin-top: 21px; }
+    .focus-item { display: flex; justify-content: space-between; gap: 14px; padding: 11px 12px; border-radius: 12px; background: rgba(255,255,255,.045); }
+    .focus-item strong { font-size: 13px; }
+    .focus-item span { color: var(--muted-2); font-size: 11px; text-align: right; }
+    section.section { padding: 58px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 25px; }
+    .section-head h2 { margin: 7px 0 0; font-size: clamp(29px, 4vw, 42px); line-height: 1.12; letter-spacing: -.045em; }
+    .section-head p { max-width: 500px; margin: 0; color: var(--muted); font-size: 14px; }
+    .subhead { margin: 36px 0 16px; display: flex; align-items: center; gap: 12px; color: var(--text); font-size: 18px; letter-spacing: -.02em; }
+    .subhead:after { content: ""; height: 1px; flex: 1; background: var(--line); }
+    .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; }
+    .project-card, .skill-card, .experience-card, .about-card, .roadmap-card {
+      border: 1px solid var(--line); border-radius: var(--radius);
+      background: linear-gradient(160deg, rgba(21,35,56,.98), rgba(15,26,43,.98));
+      box-shadow: var(--shadow);
+    }
+    .project-card { display: flex; flex-direction: column; padding: 22px; min-height: 100%; }
+    .card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .status { display: inline-flex; align-items: center; border-radius: 999px; padding: 5px 9px; background: rgba(124,224,189,.12); color: var(--accent); font-size: 10px; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+    .status.simulated { color: var(--gold); background: rgba(241,199,123,.12); }
+    .project-number { color: var(--muted-2); font-size: 11px; font-weight: 750; }
+    .project-card h3 { margin: 14px 0 8px; font-size: 20px; line-height: 1.25; letter-spacing: -.025em; }
+    .project-card p { margin: 0 0 13px; color: var(--muted); font-size: 13px; }
+    .project-card p strong { color: var(--text); }
+    .project-card ul { margin: 0 0 15px; padding-left: 18px; color: var(--muted); font-size: 12px; }
+    .project-card li { margin: 4px 0; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 5px; }
+    .chip { border-radius: 7px; padding: 4px 8px; font-size: 10px; }
+    .card-links { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 17px; }
+    .card-links a { color: var(--accent); font-size: 12px; font-weight: 800; }
+    .card-links a:hover { text-decoration: underline; }
+    .note { margin-top: 13px; padding: 10px 12px; border-left: 3px solid var(--gold); border-radius: 0 9px 9px 0; color: var(--muted); background: rgba(241,199,123,.07); font-size: 11px; }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 15px; }
+    .skill-card { padding: 20px; }
+    .skill-card h3 { margin: 0 0 12px; font-size: 16px; }
+    .skill-card p { margin: 13px 0 0; color: var(--muted); font-size: 12px; }
+    .experience-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 15px; }
+    .experience-card { padding: 21px; }
+    .experience-card h3 { margin: 0 0 3px; font-size: 17px; }
+    .meta { color: var(--muted-2); font-size: 11px; font-weight: 700; }
+    .experience-card ul { padding-left: 18px; margin: 12px 0 0; color: var(--muted); font-size: 12px; }
+    .experience-card li { margin: 5px 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .about-card { padding: 22px; }
+    .about-card h3 { margin: 0 0 8px; font-size: 17px; }
+    .about-card p { margin: 0; color: var(--muted); font-size: 13px; }
+    .secondary-section { border-top: 1px solid var(--line); background: rgba(255,255,255,.018); }
+    .secondary-label { display: inline-flex; border: 1px solid rgba(168,197,255,.25); color: var(--accent-2); background: rgba(168,197,255,.08); border-radius: 999px; padding: 5px 9px; font-size: 10px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .roadmap-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+    .roadmap-card { padding: 19px; }
+    .roadmap-card h3 { margin: 7px 0 6px; font-size: 16px; }
+    .roadmap-card p { margin: 0; color: var(--muted); font-size: 12px; }
+    .contact { padding: 28px; display: flex; justify-content: space-between; align-items: center; gap: 25px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(130deg, #1b3450, #142238); box-shadow: var(--shadow); }
+    .contact h2 { margin: 7px 0 5px; font-size: 28px; letter-spacing: -.04em; }
+    .contact p { margin: 0; color: var(--muted); font-size: 13px; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; font-size: 12px; }
+    .contact-links a { color: var(--accent); font-weight: 750; }
+    .footer { padding: 28px 0 40px; margin-top: 40px; border-top: 1px solid var(--line); color: var(--muted-2); font-size: 11px; }
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 63px; }
+      .profile-card { max-width: 560px; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 10px; }
+      .skills-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 620px) {
+      .wrap { width: min(var(--max), calc(100% - 28px)); }
+      .nav { min-height: 62px; }
+      .navlinks { gap: 11px; font-size: 11px; }
+      .navlinks a:nth-child(4), .navlinks a:nth-child(5) { display: none; }
+      .hero { padding: 52px 0 43px; }
+      h1 { font-size: 43px; }
+      .hero-copy { font-size: 15px; }
+      section.section { padding: 42px 0; }
+      .project-grid, .experience-grid, .about-grid, .skills-grid, .roadmap-grid { grid-template-columns: 1fr; }
+      .project-card { padding: 19px; }
+      .contact { display: block; padding: 22px; }
+      .contact .actions { margin-top: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
 </head>
 <body>
-<header class="nav"><div class="wrap navinner"><a class="brand" href="#home">SK<span>.</span></a><nav class="links"><a href="#projects">Projects</a><a href="#stack">My stack</a><a href="#journey">Learning path</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
-<main>
-<section class="wrap hero" id="home">
- <div><div class="eyebrow">Engineering · Data · Applied AI</div><h1>Building practical solutions with <em>data</em> and machine learning.</h1><p class="lead">I'm Siddhant Kumar, a Mechanical Engineering graduate building practical projects in Python, data analytics and applied machine learning. I enjoy turning complex problems into structured, data-informed solutions, and I'm working towards a career in applied AI engineering.</p><div class="actions"><a class="btn primary" href="#projects">Explore my projects ↘</a><a class="btn" href="https://github.com/siddzz1702/applied-ai-ml-journey" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
- <aside class="profilecard"><div class="monogram">SK</div><h3>Siddhant Kumar</h3><p>Mechanical Engineering · Data & Applied AI</p><div class="mini"><div><b>Python</b><small>Core language</small></div><div><b>Analytics</b><small>Problem-solving focus</small></div><div><b>ML</b><small>Applied projects</small></div><div><b>AI products</b><small>Long-term direction</small></div></div></aside>
-</section>
-<section class="wrap" id="projects"><div class="sectionhead"><div><div class="kicker">Selected work</div><h2>Projects & experiments</h2></div><p>Completed analytics and Power BI projects, an evolving product concept and clearly labelled work in progress.</p></div>
- <div class="grid">
-  <article class="card"><div class="cardtop"><span class="tag">Completed</span><span class="muted">01 / Python</span></div><h3>Candidate Intelligence System</h3><p>A Python project that reads candidate skill data, validates and analyses records, calculates weighted skill scores, ranks candidates and supports skill-based filtering. The scoring weights are illustrative, not a validated hiring model.</p><div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Data analysis</span><span class="chip">GitHub</span></div><a class="cardlink" href="https://github.com/siddzz1702/applied-ai-ml-journey/tree/main/projects/candidate-intelligence" target="_blank" rel="noreferrer">View project repository ↗</a></article>
-  <article class="card"><div class="cardtop"><span class="tag">Academic project</span><span class="muted">02 / Research</span></div><h3>EV Charging Station Location Analysis</h3><p>BTech thesis exploring how data analysis and forecasting can help identify suitable public EV charging locations using factors such as mobility patterns and expected demand.</p><div class="chips"><span class="chip">Data analysis</span><span class="chip">Forecasting</span><span class="chip">EV infrastructure</span><span class="chip">Spatial decision-making</span></div><span class="cardlink">Academic thesis · Manipal</span></article>
-  <article class="card"><div class="cardtop"><span class="tag">Completed</span><span class="muted">03 / Machine learning</span></div><h3>Logistic Regression Classification</h3><p>An end-to-end binary classification exercise using a synthetic dataset and a Scikit-learn Pipeline with StandardScaler and LogisticRegression. The held-out test split achieved 93.5% accuracy and approximately 0.98 ROC-AUC. Includes a confusion matrix, classification report and threshold experiments.</p><div class="chips"><span class="chip">Python</span><span class="chip">Scikit-learn</span><span class="chip">Pipelines</span><span class="chip">ROC-AUC</span><span class="chip">Evaluation</span></div><a class="cardlink" href="https://github.com/siddzz1702/applied-ai-ml-journey/tree/main/day03/machine_learning" target="_blank" rel="noreferrer">View code, results & README ↗</a></article>
-  <article class="card"><div class="cardtop"><span class="tag">Completed</span><span class="muted">04 / Power BI</span></div><h3>Customer Service Performance & Call Centre Analytics</h3><p>An interactive report analysing 559 customer-service records across call volumes, incoming and outgoing activity, representative workload, time blocks and North/South branch performance.</p><div class="chips"><span class="chip">Power BI</span><span class="chip">Power Query</span><span class="chip">DAX</span><span class="chip">KPI design</span><span class="chip">Operations analytics</span></div><a class="cardlink" href="https://github.com/siddzz1702/applied-ai-ml-journey/tree/main/PowerBI_Project/PROJECT_01_Customer_Service" target="_blank" rel="noreferrer">Project folder ↗</a><span class="muted"> · </span><a class="cardlink" href="https://github.com/siddzz1702/applied-ai-ml-journey/blob/main/PowerBI_Project/PROJECT_01_Customer_Service/Customer_Service_Analytics.pbix" target="_blank" rel="noreferrer">PBIX ↗</a><span class="muted"> · </span><a class="cardlink" href="https://github.com/siddzz1702/applied-ai-ml-journey/blob/main/PowerBI_Project/PROJECT_01_Customer_Service/Customer_Service_Analytics.pdf" target="_blank" rel="noreferrer">PDF ↗</a></article>
-  <article class="card"><div class="cardtop"><span class="tag">Completed</span><span class="muted">05 / Power BI</span></div><h3>Is Least Profitable Always Unprofitable?</h3><p>A Sample Superstore profitability dashboard comparing profit by category, the ten least profitable products, state-level performance and quarterly trends from 2013 to 2016.</p><div class="chips"><span class="chip">Power BI</span><span class="chip">Power Query</span><span class="chip">DAX</span><span class="chip">Retail analytics</span><span class="chip">Geographical analysis</span></div><a class="cardlink" href="https://github.com/siddzz1702/applied-ai-ml-journey/tree/main/PowerBI_Project/Project_02_Supersore" target="_blank" rel="noreferrer">Project folder ↗</a><span class="muted"> · </span><a class="cardlink" href="https://github.com/siddzz1702/applied-ai-ml-journey/blob/main/PowerBI_Project/Project_02_Supersore/Least_Profitable_Products_Analysis.pbix" target="_blank" rel="noreferrer">PBIX ↗</a><span class="muted"> · </span><a class="cardlink" href="https://github.com/siddzz1702/applied-ai-ml-journey/blob/main/PowerBI_Project/Project_02_Supersore/Least_Profitable_Products_Analysis.pdf" target="_blank" rel="noreferrer">PDF ↗</a></article>
-  <article class="card"><div class="cardtop"><span class="tag">Completed · Simulated case</span><span class="muted">06 / Power BI</span></div><h3>Northstar Bank — Business Analysis & Transformation</h3><p>A two-page simulated banking case study bringing together requirements traceability, UAT test execution, defect monitoring, service-request volumes, resolution times and SLA classification.</p><div class="chips"><span class="chip">Power BI</span><span class="chip">Excel</span><span class="chip">DAX</span><span class="chip">UAT</span><span class="chip">Requirements traceability</span><span class="chip">SLA monitoring</span></div><a class="cardlink" href="https://github.com/siddzz1702/applied-ai-ml-journey/tree/main/PowerBI_Project/Project_03_Transform" target="_blank" rel="noreferrer">Project folder ↗</a><span class="muted"> · </span><a class="cardlink" href="https://github.com/siddzz1702/applied-ai-ml-journey/blob/main/PowerBI_Project/Project_03_Transform/Transform.pbix" target="_blank" rel="noreferrer">PBIX ↗</a><span class="muted"> · </span><a class="cardlink" href="https://github.com/siddzz1702/applied-ai-ml-journey/blob/main/PowerBI_Project/Project_03_Transform/Transform.pdf" target="_blank" rel="noreferrer">PDF ↗</a><div class="note">Portfolio simulation: Northstar Bank and all requirements, tests, defects and service records are fictional; no real banking or customer data is used.</div></article>
-  <article class="card"><div class="cardtop"><span class="tag progress">In development</span><span class="muted">07 / Applied AI product</span></div><h3>TalentIQ — HR & Talent Intelligence</h3><p>The planned evolution of the Candidate Intelligence System into a human-in-the-loop talent intelligence platform. Future modules include resume parsing, skill extraction, job-description matching and explainable candidate insights.</p><div class="chips"><span class="chip">Python</span><span class="chip">NLP</span><span class="chip">Explainable AI</span><span class="chip">Human review</span></div><span class="cardlink">Concept in development · not yet implemented</span></article>
-  <article class="card"><div class="cardtop"><span class="tag planned">Planned</span><span class="muted">08 / Analytics</span></div><h3>Product Analytics Dashboard</h3><p>Planned analysis of engagement, retention, conversion and cohort behaviour using SQL and Python, supported by a dashboard and written insights.</p><div class="chips"><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Visualisation</span></div><span class="cardlink">Future build</span></article>
-  <article class="card"><div class="cardtop"><span class="tag planned">Planned</span><span class="muted">09 / Generative AI</span></div><h3>RAG Research Assistant</h3><p>Planned application that retrieves relevant information from a curated knowledge base and generates source-grounded answers.</p><div class="chips"><span class="chip">LLM APIs</span><span class="chip">Embeddings</span><span class="chip">Vector search</span><span class="chip">RAG</span></div><span class="cardlink">Future build</span></article>
- </div>
-</section>
-<section class="wrap" id="stack"><div class="sectionhead"><div><div class="kicker">Technology stack</div><h2>My Stack</h2></div><p>A practical snapshot of tools used in completed work and concepts currently being developed.</p></div>
- <div class="stackgrid">
-  <div class="stackbox"><h3>Programming & CS</h3><div class="chips"><span class="chip">Python</span><span class="chip">Git & GitHub</span><span class="chip">VS Code</span><span class="chip">Jupyter</span></div><p>Write clean Python, solve core coding problems and manage project versions.</p></div>
-  <div class="stackbox"><h3>Data analysis</h3><div class="chips"><span class="chip">SQL</span><span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">Tableau</span></div><p>Clean, transform, query, analyse and communicate structured datasets.</p></div>
-  <div class="stackbox"><h3>Maths for ML</h3><div class="chips"><span class="chip">Statistics fundamentals</span><span class="chip">Probability fundamentals</span><span class="chip">Feature scaling</span><span class="chip">Model metrics</span></div><p>Build the mathematical intuition needed to understand model behaviour.</p></div>
-  <div class="stackbox"><h3>Machine learning</h3><div class="chips"><span class="chip">Scikit-learn</span><span class="chip">Logistic Regression</span><span class="chip">Train/test split</span><span class="chip">Pipelines</span><span class="chip">Confusion matrix</span><span class="chip">ROC-AUC</span></div><p>Understand and implement introductory supervised learning workflows.</p></div>
-  <div class="stackbox"><h3>Analytics & visualisation</h3><div class="chips"><span class="chip">Power BI</span><span class="chip">Power Query</span><span class="chip">DAX</span><span class="chip">Data cleaning</span><span class="chip">EDA fundamentals</span><span class="chip">Tableau</span><span class="chip">Data interpretation</span></div><p>Translate raw data into useful findings and explain the limitations.</p></div>
-  <div class="stackbox"><h3>Engineering workflow</h3><div class="chips"><span class="chip">Virtual environments</span><span class="chip">Debugging</span><span class="chip">README documentation</span><span class="chip">Git workflow</span></div><p>Organise reproducible projects and document work clearly.</p></div>
- </div>
- <div class="note"><strong>Scope note:</strong> Skills shown reflect tools and concepts used in current projects; this portfolio is a learning record, not a claim of professional-level proficiency in every listed area.</div>
-</section>
-<section class="wrap" id="journey"><div class="sectionhead"><div><div class="kicker">Learning roadmap</div><h2>Where I'm heading</h2></div><p>A focused progression from programming and analytics foundations to applied AI systems.</p></div><div class="timeline">
- <div class="step"><strong>PHASE 01 · FOUNDATIONS</strong><h3>Python & data</h3><p>Python, SQL, NumPy, Pandas, statistics, probability and DSA practice.</p></div>
- <div class="step"><strong>PHASE 02 · MACHINE LEARNING</strong><h3>Models & evaluation</h3><p>Preprocessing, feature engineering, regression, classification and model validation.</p></div>
- <div class="step"><strong>PHASE 03 · AI ENGINEERING</strong><h3>Build & deploy</h3><p>Deep learning, LLMs, RAG, agent workflows, FastAPI, databases, Docker and cloud deployment—planned learning areas, not yet represented as completed projects.</p></div>
- </div></section>
-<section class="wrap" id="about"><div class="sectionhead"><div><div class="kicker">Background</div><h2>About me</h2></div></div><div class="about"><div class="card"><h3>Engineering mindset</h3><p>I hold a BTech in Mechanical Engineering from Manipal. My academic work included research on identifying optimal locations for EV charging stations using mobility and demand-related factors. I also completed an internship involving power-plant process analysis.</p></div><div class="card"><h3>What interests me</h3><p>I'm interested in the practical use of data and AI to solve operational and product problems—especially where engineering, analytics, technology and public-interest challenges meet.</p></div></div></section>
-<section class="wrap" id="contact"><div class="contact"><div><div class="kicker">Let's connect</div><h2>Interested in data, AI or product problems?</h2><p>Explore my work or get in touch.</p><div class="contactdetails" style="margin-top:18px;display:grid;gap:9px;color:var(--muted);font-size:14px"><div><strong style="color:var(--text)">LinkedIn:</strong> <a href="https://www.linkedin.com/in/siddhantkumar1702" target="_blank" rel="noreferrer" style="color:var(--accent)">linkedin.com/in/siddhantkumar1702 ↗</a></div><div><strong style="color:var(--text)">Professional email:</strong> <a href="mailto:kumarsid1702@gmail.com" style="color:var(--accent)">kumarsid1702@gmail.com</a></div></div></div><div class="actions"><a class="btn primary" href="https://github.com/siddzz1702/applied-ai-ml-journey" target="_blank" rel="noreferrer">GitHub ↗</a><a class="btn" href="mailto:kumarsid1702@gmail.com">Email me ↗</a><a class="btn" href="#home">Back to top ↑</a></div></div></section>
-</main>
-<footer class="wrap footer">© <span id="year"></span> Siddhant Kumar · Built as a living portfolio. Project statuses reflect current progress.</footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body></html>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Siddhant Kumar home">SK<span>.</span></a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#experience">Experience</a>
+        <a href="#ai-ml">AI / ML</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">Business Intelligence · Data Analytics · Business & Operations Analysis</div>
+        <h1>Turning data into <em>clearer business decisions.</em></h1>
+        <p class="hero-copy">
+          I'm <strong>Siddhant Kumar</strong>, a Mechanical Engineering graduate from Manipal Institute of Technology with a strong interest in Business Intelligence, Data Analytics and Business & Operations Analysis. I build Power BI dashboards, analyse operational performance and use data to explain business trends, identify areas for investigation and support better decisions. My core toolkit includes Power BI, SQL, Excel, Python and Tableau, while applied AI/ML remains a secondary area of learning and project exploration.
+        </p>
+        <div class="pill-row" aria-label="Core focus areas">
+          <span class="pill">Power BI & DAX</span>
+          <span class="pill">SQL & Excel</span>
+          <span class="pill">Python & Tableau</span>
+          <span class="pill">KPI & Operations Reporting</span>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore analytics projects ↓</a>
+          <a class="btn" href="https://www.linkedin.com/in/siddhantkumar1702/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/siddzz1702/applied-ai-ml-journey" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+      <aside class="profile-card">
+        <div class="monogram">SK</div>
+        <h2>Siddhant Kumar</h2>
+        <p>Business Intelligence · Data & Operations Analytics</p>
+        <div class="focus-list">
+          <div class="focus-item"><strong>Power BI</strong><span>Dashboards & DAX</span></div>
+          <div class="focus-item"><strong>Data Analytics</strong><span>SQL · Python · Excel</span></div>
+          <div class="focus-item"><strong>Business Analysis</strong><span>KPIs · Process insights</span></div>
+          <div class="focus-item"><strong>Applied AI / ML</strong><span>Secondary focus</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section wrap" id="projects">
+      <div class="section-head">
+        <div><div class="kicker">Selected work · Primary focus</div><h2>Business Intelligence & Power BI Projects</h2></div>
+        <p>Three dashboard projects focused on operational performance, profitability and business-process visibility. Each project starts with a business question and uses data modelling, measures and visual reporting to make the analysis easier to explore.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="card-top"><span class="status">Completed</span><span class="project-number">01 · Power BI</span></div>
+          <h3>Customer Service Performance & Call Centre Analytics</h3>
+          <p><strong>Business problem:</strong> Managers need a consolidated view of call activity, waiting times, representative workload and branch performance to understand where service operations may need attention.</p>
+          <ul>
+            <li>Prepared and analysed 559 records across 14 fields using Power Query.</li>
+            <li>Built DAX measures for total calls, incoming/outgoing activity, average incoming wait time, lost calls and abandoned calls.</li>
+            <li>Created report views for service overview, representative performance and North/South branch comparisons, including Top-10 and time-block analysis.</li>
+          </ul>
+          <div class="chips"><span class="chip">Power BI</span><span class="chip">Power Query</span><span class="chip">DAX</span><span class="chip">Excel</span><span class="chip">KPI reporting</span><span class="chip">Operations analytics</span></div>
+          <div class="card-links">
+            <a href="https://github.com/siddzz1702/applied-ai-ml-journey/tree/main/PowerBI_Project/PROJECT_01_Customer_Service" target="_blank" rel="noreferrer">Project & README ↗</a>
+            <a href="https://github.com/siddzz1702/applied-ai-ml-journey/blob/main/PowerBI_Project/PROJECT_01_Customer_Service/Customer_Service_Analytics.pbix" target="_blank" rel="noreferrer">PBIX ↗</a>
+            <a href="https://github.com/siddzz1702/applied-ai-ml-journey/blob/main/PowerBI_Project/PROJECT_01_Customer_Service/Customer_Service_Analytics.pdf" target="_blank" rel="noreferrer">PDF report ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-top"><span class="status">Completed</span><span class="project-number">02 · Power BI</span></div>
+          <h3>Retail Profitability Analysis – Is Least Profitable Always Unprofitable?</h3>
+          <p><strong>Business problem:</strong> Low-profit products are not necessarily unprofitable in every market. The analysis explores where profitability varies across products, categories, states and time.</p>
+          <ul>
+            <li>Prepared the Sample Superstore dataset and developed DAX profit measures.</li>
+            <li>Compared category profitability and ranked the 10 least-profitable products.</li>
+            <li>Combined state-level profit mapping, quarterly trends from 2013–2016 and department filtering.</li>
+          </ul>
+          <div class="chips"><span class="chip">Power BI</span><span class="chip">Power Query</span><span class="chip">DAX</span><span class="chip">Retail analytics</span><span class="chip">Trend analysis</span><span class="chip">Geographical analysis</span></div>
+          <div class="card-links">
+            <a href="https://github.com/siddzz1702/applied-ai-ml-journey/tree/main/PowerBI_Project/Project_02_Supersore" target="_blank" rel="noreferrer">Project & README ↗</a>
+            <a href="https://github.com/siddzz1702/applied-ai-ml-journey/blob/main/PowerBI_Project/Project_02_Supersore/Least_Profitable_Products_Analysis.pbix" target="_blank" rel="noreferrer">PBIX ↗</a>
+            <a href="https://github.com/siddzz1702/applied-ai-ml-journey/blob/main/PowerBI_Project/Project_02_Supersore/Least_Profitable_Products_Analysis.pdf" target="_blank" rel="noreferrer">PDF report ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-top"><span class="status simulated">Completed · Simulated case</span><span class="project-number">03 · Power BI</span></div>
+          <h3>Northstar Bank – Business Analysis & Transformation</h3>
+          <p><strong>Business problem:</strong> Testing and operations teams need visibility into requirements coverage, UAT execution, defects, service-request volumes and SLA classifications when reviewing a change or operational snapshot.</p>
+          <ul>
+            <li>Created a simulated dataset containing 10 business requirements, 20 UAT test cases, 4 defects and 500 service requests.</li>
+            <li>Connected requirements to test cases and defects to demonstrate requirements traceability.</li>
+            <li>Built UAT and service-operations report pages for test status, defect monitoring, service volumes, resolution time and SLA classifications.</li>
+          </ul>
+          <div class="chips"><span class="chip">Power BI</span><span class="chip">Excel</span><span class="chip">DAX</span><span class="chip">UAT reporting</span><span class="chip">Traceability</span><span class="chip">SLA monitoring</span></div>
+          <div class="card-links">
+            <a href="https://github.com/siddzz1702/applied-ai-ml-journey/tree/main/PowerBI_Project/Project_03_Transform" target="_blank" rel="noreferrer">Project & README ↗</a>
+            <a href="https://github.com/siddzz1702/applied-ai-ml-journey/blob/main/PowerBI_Project/Project_03_Transform/Transform.pbix" target="_blank" rel="noreferrer">PBIX ↗</a>
+            <a href="https://github.com/siddzz1702/applied-ai-ml-journey/blob/main/PowerBI_Project/Project_03_Transform/Transform.pdf" target="_blank" rel="noreferrer">PDF report ↗</a>
+          </div>
+          <div class="note">Portfolio simulation: the organisation, requirements, test cases, defects, service records and results are fictional. This is not production banking data or professional UAT delivery.</div>
+        </article>
+      </div>
+
+      <div class="subhead">Additional Data Analytics & Research Projects</div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="card-top"><span class="status">Completed</span><span class="project-number">04 · Python analytics</span></div>
+          <h3>Candidate Intelligence System</h3>
+          <p><strong>Problem:</strong> Candidate skill records need to be structured, checked and compared consistently rather than reviewed as unorganised rows of data.</p>
+          <ul>
+            <li>Built a Python workflow for CSV ingestion, missing-value checks, data cleaning and validation.</li>
+            <li>Used Pandas and NumPy for skill analysis, search, filtering, candidate ranking and weighted scoring.</li>
+            <li>Added Pytest cases for validation, scoring logic and input handling.</li>
+          </ul>
+          <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Pytest</span><span class="chip">Data validation</span></div>
+          <div class="card-links"><a href="https://github.com/siddzz1702/applied-ai-ml-journey/tree/main/projects/candidate-intelligence" target="_blank" rel="noreferrer">Code & README ↗</a></div>
+          <div class="note">The weighted scoring model is illustrative and is not a validated hiring or candidate suitability model.</div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-top"><span class="status">Academic project</span><span class="project-number">05 · Engineering research</span></div>
+          <h3>Public EV Charging-Station Location Analysis</h3>
+          <p><strong>Research problem:</strong> Public charging infrastructure planning requires an understanding of EV adoption, expected demand, mobility patterns and access to existing urban infrastructure.</p>
+          <ul>
+            <li>Reviewed government vehicle-registration information, including VAHAN, to examine EV-adoption patterns.</li>
+            <li>Explored regression-based forecasting approaches and planning factors such as population density, travel patterns and existing charging infrastructure.</li>
+            <li>Considered access to parking, workplaces and highways when developing location-planning considerations.</li>
+          </ul>
+          <div class="chips"><span class="chip">Python</span><span class="chip">R</span><span class="chip">MATLAB</span><span class="chip">Excel</span><span class="chip">Forecasting</span><span class="chip">EV infrastructure</span></div>
+          <div class="card-links"><span class="meta">Undergraduate thesis · Manipal Institute of Technology</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="capabilities">
+      <div class="section-head">
+        <div><div class="kicker">Core capabilities</div><h2>What I work with</h2></div>
+        <p>My primary focus is business intelligence and analytics: preparing data, building clear reporting, analysing operational performance and communicating what the numbers indicate.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Business Intelligence & Reporting</h3>
+          <div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span><span class="chip">Tableau</span><span class="chip">KPI dashboards</span><span class="chip">Management reporting</span></div>
+          <p>Build interactive reports, transform data, develop measures and communicate performance through visual reporting.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Data Analytics & Querying</h3>
+          <div class="chips"><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Advanced Excel</span><span class="chip">Data cleaning</span><span class="chip">Validation</span></div>
+          <p>Prepare and inspect structured data, compare segments, review trends and support evidence-based analysis.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Business & Operations Analysis</h3>
+          <div class="chips"><span class="chip">Operational KPIs</span><span class="chip">Trend analysis</span><span class="chip">Performance monitoring</span><span class="chip">Process review</span><span class="chip">UAT reporting</span><span class="chip">Documentation</span></div>
+          <p>Translate operational questions into measures and reporting views; identify patterns and areas that merit further investigation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="experience">
+      <div class="section-head">
+        <div><div class="kicker">Professional & operational exposure</div><h2>Experience</h2></div>
+        <p>A combination of industrial exposure, occasional involvement in family-business operations and volunteer coordination.</p>
+      </div>
+      <div class="experience-grid">
+        <article class="experience-card">
+          <h3>Business Operations Support · Family-Owned Hotel & Hospital Businesses</h3>
+          <div class="meta">Occasional involvement across an approximately three-year period</div>
+          <ul>
+            <li>Supported hotel operations through staff, vendor and inventory coordination.</li>
+            <li>Provided operational support across multiple areas of a family-run hospital.</li>
+            <li>Helped identify operational problems, coordinate with staff and support practical workflow improvements.</li>
+          </ul>
+        </article>
+        <article class="experience-card">
+          <h3>Industrial Intern · Super Smelters Ltd.</h3>
+          <div class="meta">Jamuria, West Bengal · June 2022 – July 2022</div>
+          <ul>
+            <li>Observed thermal power-plant, turbine and energy-generation workflows.</li>
+            <li>Reviewed operating processes to understand bottlenecks, equipment monitoring, maintenance considerations and operational-efficiency drivers.</li>
+          </ul>
+        </article>
+        <article class="experience-card">
+          <h3>Head of Management · Goonj</h3>
+          <div class="meta">Volunteer leadership · September 2019 – March 2022</div>
+          <ul>
+            <li>Supported planning and coordination of club activities and events.</li>
+            <li>Worked across teams, managed schedules and helped execute activities from preparation through delivery.</li>
+          </ul>
+        </article>
+        <article class="experience-card">
+          <h3>Education & Independent Study</h3>
+          <div class="meta">B.Tech, Mechanical Engineering · Manipal Institute of Technology · 2019–2023</div>
+          <ul>
+            <li>CGPA: 7.31/10 · Minor: Digital Marketing.</li>
+            <li>Independent study and research across governance, economy, public policy and international relations strengthened structured research, evidence synthesis and written communication.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section secondary-section" id="ai-ml">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="secondary-label">Secondary focus</span><h2>Applied AI & Machine Learning</h2></div>
+          <p>Alongside my primary BI and analytics focus, I continue to build foundational skills in applied machine learning and explore how AI can support analytical workflows.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="card-top"><span class="status">Completed learning project</span><span class="project-number">ML · 01</span></div>
+            <h3>Logistic Regression Classification</h3>
+            <p><strong>Problem:</strong> Build and evaluate a binary classifier using numerical input features, then assess its performance on held-out synthetic data.</p>
+            <ul>
+              <li>Generated a synthetic dataset of 1,000 observations and five features.</li>
+              <li>Built a Scikit-learn pipeline using StandardScaler and LogisticRegression with an 80:20 stratified train/test split.</li>
+              <li>Evaluated the model using a confusion matrix, classification report, ROC curve and threshold experiments.</li>
+            </ul>
+            <div class="chips"><span class="chip">Python</span><span class="chip">Scikit-learn</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">ROC-AUC</span></div>
+            <div class="card-links"><a href="https://github.com/siddzz1702/applied-ai-ml-journey/tree/main/day03/machine_learning" target="_blank" rel="noreferrer">Code, results & README ↗</a></div>
+            <div class="note">The reported 93.5% accuracy and approximately 0.98 ROC-AUC are results on the project's synthetic held-out test split, not a real-world deployment result.</div>
+          </article>
+          <article class="project-card">
+            <div class="card-top"><span class="status" style="color:var(--gold);background:rgba(241,199,123,.12)">In development</span><span class="project-number">AI product concept · 02</span></div>
+            <h3>TalentIQ – HR & Talent Intelligence</h3>
+            <p>An evolving concept to extend the Candidate Intelligence System into a human-reviewed talent intelligence workflow, with potential modules for resume parsing, skill extraction, job-description matching and explainable candidate insights.</p>
+            <div class="chips"><span class="chip">Python</span><span class="chip">NLP concepts</span><span class="chip">Explainable AI</span><span class="chip">Human review</span></div>
+            <div class="note">Concept in development. Planned modules are not represented as implemented functionality.</div>
+          </article>
+        </div>
+        <div class="subhead">Further planned learning projects</div>
+        <div class="roadmap-grid">
+          <article class="roadmap-card"><span class="secondary-label">Planned</span><h3>Product Analytics Dashboard</h3><p>Planned exploration of engagement, retention, conversion and cohort behaviour using SQL, Python and visual reporting.</p></article>
+          <article class="roadmap-card"><span class="secondary-label">Planned</span><h3>RAG Research Assistant</h3><p>Planned source-grounded research assistant using a curated knowledge base, embeddings and retrieval workflows.</p></article>
+          <article class="roadmap-card"><span class="secondary-label">Learning path</span><h3>AI Engineering Foundations</h3><p>Continuing to learn model evaluation, data workflows, LLM concepts and practical deployment fundamentals.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="about">
+      <div class="section-head"><div><div class="kicker">Background</div><h2>About me</h2></div></div>
+      <div class="about-grid">
+        <article class="about-card"><h3>Engineering mindset</h3><p>My Mechanical Engineering background trained me to approach problems systematically and understand how operational systems work. My undergraduate thesis on public EV charging-location analysis brought together data, forecasting and infrastructure-planning considerations.</p></article>
+        <article class="about-card"><h3>What I want to work on</h3><p>I'm interested in Business Intelligence, Data Analytics and Business & Operations Analysis roles where I can work with data, develop useful reporting, investigate operational performance and communicate insights clearly. Applied AI/ML is a secondary area I continue to explore.</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="contact">
+      <div class="contact">
+        <div>
+          <div class="kicker">Let's connect</div>
+          <h2>Have a business or data problem to solve?</h2>
+          <p>I'm open to opportunities in Business Intelligence, Data Analytics, Power BI and Business & Operations Analysis.</p>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/siddhantkumar1702/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/siddzz1702" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="mailto:kumarsid1702@gmail.com">kumarsid1702@gmail.com</a>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://www.linkedin.com/in/siddhantkumar1702/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
+          <a class="btn" href="mailto:kumarsid1702@gmail.com">Email me ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">© <span id="year"></span> Siddhant Kumar · Portfolio focused on Business Intelligence, Data Analytics and Business & Operations Analysis. AI/ML projects are presented as a secondary learning area.</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
